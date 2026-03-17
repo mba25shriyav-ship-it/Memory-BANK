@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemoryBank | Relive Any Life</title>
+    <meta name="description" content="Store, experience, and monetize human memories through neural technology.">
+    <!-- Modern, sleek, highly readable fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- GSAP for smooth animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="light-theme">
+    <!-- Neural Network Visual Background -->
+    <div class="background-canvas">
+        <canvas id="neural-bg"></canvas>
+    </div>
+
+    <!-- Soft Gradient Base Objects -->
+    <div class="bg-glow blue-glow"></div>
+    <div class="bg-glow purple-glow"></div>
+    <div class="bg-glow neon-glow"></div>
+
+    <!-- Navbar -->
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon glow-pulse"></div> MemoryBank
+            </a>
+            <div class="nav-links">
+                <a href="#how-it-works">How It Works</a>
+                <a href="#marketplace">Experiences</a>
+                <a href="#vault">Vault</a>
+                <a href="#enterprise">Enterprise</a>
+                <a href="#pricing">Pricing</a>
+            </div>
+            <a href="#signup" class="btn btn-primary nav-cta">Get Access</a>
+        </div>
+    </nav>
+
+    <!-- 1. Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="badge fade-in-up">NEURAL TECHNOLOGY • EST 2050</div>
+                <h1 class="hero-title fade-in-up delay-1">
+                    Own Your Memories.<br>
+                    <span class="gradient-text">Relive Any Life.</span>
+                </h1>
+                <p class="hero-subtext fade-in-up delay-2">
+                    Store, experience, and monetize human memories through neural technology. The world's first decentralized consciousness cloud.
+                </p>
+                <div class="hero-buttons fade-in-up delay-3">
+                    <a href="#marketplace" class="btn btn-primary btn-lg">Explore Experiences</a>
+                    <a href="#signup" class="btn btn-outline btn-lg glow-border">Upload Your Memory</a>
+                </div>
+            </div>
+            <div class="hero-visual fade-in-up delay-4">
+                <div class="memory-orb-container">
+                    <div class="orb-core"></div>
+                    <div class="orb-ring ring-1"></div>
+                    <div class="orb-ring ring-2"></div>
+                    <div class="orb-ring ring-3"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title text-center reveal">The Memory Pipeline</h2>
+            <div class="steps-grid">
+                <!-- Step 1 -->
+                <div class="step-card glass reveal">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2A10 10 0 1 0 22 12A10 10 0 0 0 12 2Z"></path><path d="M12 6V12L16 16"></path></svg>
+                    </div>
+                    <h3>Capture</h3>
+                    <p>Neural interface records your sensory & emotional experience in ultra-high fidelity.</p>
+                </div>
+                <!-- Step 2 -->
+                <div class="step-card glass reveal delay-1">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7A5 5 0 0 1 17 7V11"></path></svg>
+                    </div>
+                    <h3>Store</h3>
+                    <p>Encrypted safely in your personal, quantum-secured memory cloud vault.</p>
+                </div>
+                <!-- Step 3 -->
+                <div class="step-card glass reveal delay-2">
+                    <div class="step-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
+                    </div>
+                    <h3>Relive / Trade</h3>
+                    <p>Replay your own memories or monetize them securely on our open marketplace.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Experience Marketplace -->
+    <section class="marketplace" id="marketplace">
+        <div class="container">
+            <div class="market-header reveal">
+                <div>
+                    <h2 class="section-title">Experience Marketplace</h2>
+                    <p class="section-subtext">Step into someone else's shoes for a moment.</p>
+                </div>
+                <div class="emotion-control glass">
+                    <label for="emotion-slider">Emotion Intensity:</label>
+                    <input type="range" id="emotion-slider" min="1" max="10" value="7" class="slider">
+                    <span id="intensity-val" class="gradient-text">Level 7</span>
+                </div>
+            </div>
+
+            <div class="market-grid">
+                <!-- Card 1 -->
+                <div class="market-item glass reveal" data-intensity="4">
+                    <div class="item-visual travel-bg">
+                        <div class="nft-badge">Memory NFT Verified</div>
+                    </div>
+                    <div class="item-content">
+                        <span class="category">🌍 Travel Lives</span>
+                        <h3>Live 7 days in Iceland</h3>
+                        <div class="item-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 2h (7d condensed)</span>
+                            <span class="intensity-tag i-low">Intensity: Low</span>
+                        </div>
+                        <div class="item-footer">
+                            <span class="price">400 MBK</span>
+                            <button class="btn btn-outline btn-sm preview-btn">Preview Snippet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="market-item glass reveal delay-1" data-intensity="6">
+                    <div class="item-visual skill-bg"></div>
+                    <div class="item-content">
+                        <span class="category">🧠 Skill Packs</span>
+                        <h3>Master Public Speaking</h3>
+                        <div class="item-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 45 min load</span>
+                            <span class="intensity-tag i-med">Intensity: Medium</span>
+                        </div>
+                        <div class="item-footer">
+                            <span class="price included">Pro Access</span>
+                            <button class="btn btn-outline btn-sm preview-btn">Preview Snippet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="market-item glass reveal delay-2" data-intensity="8">
+                    <div class="item-visual celeb-bg"></div>
+                    <div class="item-content">
+                        <span class="category">🎭 Celebrity Experiences</span>
+                        <h3>A Day as a Global CEO</h3>
+                        <div class="item-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 12h Realtime</span>
+                            <span class="intensity-tag i-high">Intensity: High</span>
+                        </div>
+                        <div class="item-footer">
+                            <span class="price">1,200 MBK</span>
+                            <button class="btn btn-outline btn-sm preview-btn">Preview Snippet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="market-item glass reveal" data-intensity="7">
+                    <div class="item-visual prof-bg"></div>
+                    <div class="item-content">
+                        <span class="category">💼 Professional Sims</span>
+                        <h3>Boardroom Crisis Handling</h3>
+                        <div class="item-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 30 min burst</span>
+                            <span class="intensity-tag i-high">Intensity: High</span>
+                        </div>
+                        <div class="item-footer">
+                            <span class="price">250 MBK</span>
+                            <button class="btn btn-outline btn-sm preview-btn">Preview Snippet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="market-item glass reveal delay-1" data-intensity="10">
+                    <div class="item-visual emotion-bg">
+                        <div class="nft-badge rare">Rare Edition</div>
+                    </div>
+                    <div class="item-content">
+                        <span class="category">❤️ Emotional Experiences</span>
+                        <h3>Parenthood: First Steps</h3>
+                        <div class="item-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 5 min core memory</span>
+                            <span class="intensity-tag i-max">Intensity: Max</span>
+                        </div>
+                        <div class="item-footer">
+                            <span class="price included">Elite Tier</span>
+                            <button class="btn btn-outline btn-sm preview-btn">Preview Snippet</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="market-item glass reveal delay-2" data-intensity="3">
+                    <div class="item-visual edu-bg"></div>
+                    <div class="item-content">
+                        <span class="category">🎓 Education Packs</span>
+                        <h3>Walk Through Ancient Rome</h3>
+                        <div class="item-meta">
+                            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> 3h immersive</span>
+                            <span class="intensity-tag i-low">Intensity: Low</span>
+                        </div>
+                        <div class="item-footer">
+                            <span class="price included">Free Access</span>
+                            <button class="btn btn-outline btn-sm preview-btn">Preview Snippet</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Memory Vault -->
+    <section class="vault" id="vault">
+        <div class="container">
+            <h2 class="section-title reveal">Your Memory Vault</h2>
+            <div class="vault-dashboard glass reveal">
+                <div class="vault-sidebar">
+                    <div class="user-profile">
+                        <div class="avatar gradient-bg"></div>
+                        <div class="user-info">
+                            <strong>Neural ID: 0x4B9A</strong>
+                            <span>Secure Mode</span>
+                        </div>
+                    </div>
+                    <div class="vault-filters">
+                        <h4>Timeline Filters</h4>
+                        <label class="filter-chip active"><input type="checkbox" checked hidden> By Emotion</label>
+                        <label class="filter-chip active"><input type="checkbox" checked hidden> By People</label>
+                        <label class="filter-chip"><input type="checkbox" hidden> By Location</label>
+                    </div>
+                    <div class="ai-curator">
+                        <h4>AI Curator</h4>
+                        <button class="btn btn-secondary w-full">Suggest by Mood</button>
+                    </div>
+                </div>
+                <div class="vault-main">
+                    <div class="vault-header">
+                        <h3>Personal Library</h3>
+                        <button class="btn btn-outline btn-sm edit-memory-btn"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg> Edit Memories</button>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-row">
+                            <div class="timeline-dot blue"></div>
+                            <div class="timeline-content glass">
+                                <div class="time-meta">Oct 2050 • Joy</div>
+                                <h4>Graduation Ceremony</h4>
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='100'><rect width='400' height='100' fill='%23eaecf0' rx='8'/><text x='150' y='55' font-family='sans-serif' font-size='14' fill='%23667085'>Memory Timeline Waveform</text></svg>" alt="waveform" class="waveform">
+                            </div>
+                        </div>
+                        <div class="timeline-row">
+                            <div class="timeline-dot purple"></div>
+                            <div class="timeline-content glass">
+                                <div class="time-meta">Sep 2050 • Calm</div>
+                                <h4>Kyoto Zen Garden Walk</h4>
+                                <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='100'><rect width='400' height='100' fill='%23eaecf0' rx='8'/><text x='150' y='55' font-family='sans-serif' font-size='14' fill='%23667085'>Memory Timeline Waveform</text></svg>" alt="waveform" class="waveform">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. MemoryCare Initiative -->
+    <section class="memorycare" id="memorycare">
+        <div class="container memorycare-grid reveal">
+            <div class="csr-content">
+                <span class="badge secondary">MemoryCare Initiative</span>
+                <h2 class="section-title">Preserving identity beyond memory loss.</h2>
+                <p class="csr-text">MemoryBank provides free quantum-encrypted backups for dementia patients. We believe every life is a story worth keeping, allowing families to securely access and relive shared moments forever.</p>
+                <ul class="csr-list">
+                    <li>✓ Free memory backups for patients</li>
+                    <li>✓ Secure family access protocols</li>
+                    <li>✓ Human storytelling preservation</li>
+                </ul>
+            </div>
+            <div class="csr-visual">
+                <div class="care-orb pulse-soft"></div>
+                <div class="care-orb-ring"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Business & Enterprise Solutions -->
+    <section class="enterprise" id="enterprise">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Enterprise Solutions</h2>
+            <div class="enterprise-grid">
+                <div class="e-card glass reveal">
+                    <h3>Corporate Training</h3>
+                    <p>Transfer years of executive experience to new hires via direct neural sync in matters of days.</p>
+                </div>
+                <div class="e-card glass reveal delay-1">
+                    <h3>Medical Therapy</h3>
+                    <p>Clinical tools for trauma treatment, PTSD overriding, and advanced behavioral modification.</p>
+                </div>
+                <div class="e-card glass reveal delay-2">
+                    <h3>Education Licensing</h3>
+                    <p>Provide institutions with access to historical and scientific phenomenological datasets.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. Financial Projections -->
+    <section class="financials" id="financials">
+        <div class="container financial-split reveal">
+            <div class="financial-text">
+                <h2 class="section-title">Exponential Growth</h2>
+                <p>A 5-year projection highlighting our transition from simple subscription storage to a high-volume experience marketplace.</p>
+            </div>
+            <div class="chart-container glass">
+                <h4 class="chart-title">Revenue Projections (2050 - 2055)</h4>
+                <div class="css-chart">
+                    <div class="bar-col">
+                        <div class="bar sub" style="height: 40%;"></div>
+                        <div class="bar market" style="height: 10%;"></div>
+                        <span>'50</span>
+                    </div>
+                    <div class="bar-col">
+                        <div class="bar sub" style="height: 50%;"></div>
+                        <div class="bar market" style="height: 30%;"></div>
+                        <span>'52</span>
+                    </div>
+                    <div class="bar-col">
+                        <div class="bar sub" style="height: 60%;"></div>
+                        <div class="bar market" style="height: 80%;"></div>
+                        <span>'55</span>
+                    </div>
+                </div>
+                <div class="chart-legend">
+                    <span class="legend-item"><span class="color-box sub-color"></span> Subscription</span>
+                    <span class="legend-item"><span class="color-box market-color"></span> Marketplace</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title text-center reveal">Choose Your Access</h2>
+            <div class="pricing-grid">
+                <!-- Basic -->
+                <div class="price-card glass reveal">
+                    <h3>Basic</h3>
+                    <div class="price">Free</div>
+                    <p class="price-desc">Personal storage</p>
+                    <ul class="features-list">
+                        <li>1TB Secure Storage</li>
+                        <li>Standard Compression</li>
+                        <li>Vault Timeline View</li>
+                    </ul>
+                    <button class="btn btn-outline w-full">Current Plan</button>
+                </div>
+                <!-- Pro -->
+                <div class="price-card glass featured reveal delay-1">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Pro</h3>
+                    <div class="price">49<span class="cur">MBK/mo</span></div>
+                    <p class="price-desc">Storage + Marketplace access</p>
+                    <ul class="features-list">
+                        <li>Unlimited Storage</li>
+                        <li>Marketplace Buying/Selling</li>
+                        <li>AI Memory Curator</li>
+                        <li>Emotion Slider Unlock</li>
+                    </ul>
+                    <button class="btn btn-primary w-full">Upgrade to Pro</button>
+                </div>
+                <!-- Elite -->
+                <div class="price-card glass reveal delay-2">
+                    <h3>Elite</h3>
+                    <div class="price">199<span class="cur">MBK/mo</span></div>
+                    <p class="price-desc">Premium experiences + unlimited</p>
+                    <ul class="features-list">
+                        <li>All Pro Features</li>
+                        <li>Unlimited Premium Access</li>
+                        <li>"Borrow a Life" Mode</li>
+                        <li>Memory NFT Minting</li>
+                    </ul>
+                    <button class="btn btn-outline w-full glow-border">Join Elite</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. Sign-Up / Interaction Form -->
+    <section class="signup" id="signup">
+        <div class="container reveal">
+            <div class="form-wrapper glass">
+                <h2 class="section-title text-center">Join the Waitlist</h2>
+                <form class="signup-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" required placeholder="Jane Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" required placeholder="jane@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Interest</label>
+                        <select id="interest" required>
+                            <option value="" disabled selected>Select an option...</option>
+                            <option value="store">Store memories</option>
+                            <option value="buy">Buy experiences</option>
+                            <option value="sell">Sell experiences</option>
+                            <option value="enterprise">Enterprise inquiry</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-full btn-lg">Submit Form</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="brand-col">
+                <h3><div class="logo-icon small"></div> MemoryBank</h3>
+                <p>Preserving identity, expanding consciousness.</p>
+            </div>
+            <div class="links-col">
+               <h4>Vision</h4>
+               <a href="#">Our Story</a>
+               <a href="#">Neuro-Ethics</a>
+            </div>
+            <div class="links-col">
+               <h4>Social</h4>
+               <a href="#">Twitter</a>
+               <a href="#">LinkedIn</a>
+            </div>
+            <div class="links-col">
+               <h4>Contact</h4>
+               <a href="#">support@memorybank.network</a>
+               <a href="#">1-800-NEURAL</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Futuristic Features Overlay: Live Preview Mode -->
+    <div id="preview-overlay" class="preview-overlay hidden">
+        <div class="preview-modal glass">
+            <button class="close-preview">&times;</button>
+            <div class="preview-video-container">
+                <div class="static-overlay"></div>
+                <div class="scanning-line"></div>
+                <h3>Establishing Neural Link...</h3>
+                <p>Buffering sensory data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
